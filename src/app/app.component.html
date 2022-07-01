@@ -9,8 +9,19 @@
 <br>
 <ul *ngFor = "let item of list" class="list-unstyled">
   <li>
+
     {{item.name}} <button (click)="removeTask(item.id)" class="removeBtn">Remove</button>
     <button (click)="editTask(item)">Edit</button>
+    <button (click)="doneTask(item)">Done</button>
   </li>
 </ul>
 </div>
+<div class="doneColumn">
+  
+  <h1 class="text-center ">Done</h1>
+  <ul *ngFor = "let task of doneList" class="list-unstyled">
+    <li>
+      {{task.name}}
+    </li>
+  </ul>
+  </div>
